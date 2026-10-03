@@ -1,0 +1,26 @@
+=== PRUEBAS FUNCIONALES ===
+OK    RF-01 Tablero 3x3 con 8 fichas y vacío
+OK    RF-01 Tablero 4x4 con 15 fichas y vacío
+OK    RF-02 500 mezclas 3x3 resolubles
+OK    RF-02 500 mezclas 4x4 resolubles
+OK    Paridad detecta tablero imposible (2 fichas intercambiadas)
+OK    RF-03 Mover ficha adyacente (8) al vacío
+OK    RF-04 Ficha no adyacente rechazada y tablero intacto
+OK    RF-04 Coordenadas fuera del tablero rechazadas
+OK    RF-05 Detecta tablero resuelto
+OK    RF-05 No marca victoria en tablero mezclado
+OK    RF-05 Victoria tras deshacer el último movimiento
+OK    Solver A* llega a la meta en tablero 3x3
+Total: 12/12 aprobadas
+
+=== ANÁLISIS EMPÍRICO ===
+3x3 (50 tableros aleatorios):
+  A*     pasos=22.20 nodos=1502.6 ms=7.001 soluciones óptimas=50/50
+  BFS    pasos=22.20 nodos=94101.2 ms=159.641 soluciones óptimas=50/50
+  Voraz  pasos=44.60 nodos=285.6 ms=1.254 soluciones óptimas=1/50
+4x4 (20 tableros a 60 pasos de la meta):
+  A*     resueltos=20/20 pasos=37.60 nodos=595824.2 ms=5573.24
+  Voraz  resueltos=20/20 pasos=110.20 nodos=2773.5 ms=20.75
+  BFS    resueltos=0/20 pasos=- nodos=200000.0 ms=349.73
+Mezcla ingenua 3x3: 504/1000 sin solución (50.4 %)
+Tiempo de respuesta por movimiento (lógica): 0.00127 ms
